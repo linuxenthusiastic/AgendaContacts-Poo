@@ -25,7 +25,7 @@ dotnet run
 # https://dotnet.microsoft.com/download/dotnet/8.0
 
 # 2. Abrir PowerShell o CMD y clonar el proyecto
-git clone https://github.com/TU_USUARIO/ContactsAgenda.git
+git clone https://github.com/linuxenthusiastic/AgendaContacts-Poo
 cd ContactsAgenda
 
 # 3. Ejecutar la aplicación
