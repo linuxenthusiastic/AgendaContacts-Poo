@@ -13,7 +13,7 @@
 ```csharp
 public class Agenda
 {
-    private List<Contact> contacts;  // ← RESALTAR ESTO
+    private List<Contact> contacts;
     
     public Agenda()
     {
