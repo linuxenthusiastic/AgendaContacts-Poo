@@ -80,46 +80,6 @@ public class Contact
 
 ---
 
-## 🎨 **PARTE 3: INTERFAZ GRÁFICA**
-
-```csharp
-public partial class MainWindow : Window
-{
-    private readonly Agenda agenda;
-    private ObservableCollection<Contact> contactosVisibles;
-
-    public MainWindow()
-    {
-        InitializeComponent();
-
-        agenda = new Agenda();
-        contactosVisibles = new ObservableCollection<Contact>();
-    }
-```
-
-```csharp
-private void OnAgregarClick(object sender, RoutedEventArgs e)
-{
-    var nombre = txtNombre.Text;
-    var telefono = txtTelefono.Text;
-    var email = txtEmail.Text;
-
-    if (string.IsNullOrWhiteSpace(nombre))
-    {
-        MostrarMensaje("Por favor ingrese un nombre");
-        return;
-    }
-
-    var nuevoContacto = new Contact(nombre, telefono, email);
-    
-    if (agenda.AgregarContacto(nuevoContacto))
-    {
-        ActualizarLista();
-        LimpiarCampos();
-    }
-}
-```
-
 ---
 
 ## 🚀 **PARTE 4: DEMOSTRACIÓN EN VIVO**
