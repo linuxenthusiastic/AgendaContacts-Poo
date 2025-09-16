@@ -25,7 +25,7 @@ public class Agenda
 public bool AgregarContacto(Contact contact)
 {
     if (contact == null || string.IsNullOrWhiteSpace(contact.Name))
-        return false;  // ← Validación de datos
+        return false;
         
     contacts.Add(contact);
     return true;
@@ -33,7 +33,6 @@ public bool AgregarContacto(Contact contact)
 
 public Contact? BuscarContacto(string name)
 {
-    // Búsqueda controlada
     return contacts.FirstOrDefault(c => 
         c.Name.ToLower().Contains(name.ToLower()));
 }
@@ -71,15 +70,13 @@ public class Contact
 ```csharp
 public partial class MainWindow : Window
 {
-    // 🔴 PUNTO CLAVE #4: Usamos la clase Agenda
     private readonly Agenda agenda;
     private ObservableCollection<Contact> contactosVisibles;
 
     public MainWindow()
     {
         InitializeComponent();
-        
-        // Crear instancia de Agenda (encapsulada)
+
         agenda = new Agenda();
         contactosVisibles = new ObservableCollection<Contact>();
     }
@@ -92,7 +89,6 @@ private void OnAgregarClick(object sender, RoutedEventArgs e)
     var telefono = txtTelefono.Text;
     var email = txtEmail.Text;
 
-    // 🔴 PUNTO CLAVE #5: Validación antes de agregar
     if (string.IsNullOrWhiteSpace(nombre))
     {
         MostrarMensaje("Por favor ingrese un nombre");
@@ -101,8 +97,7 @@ private void OnAgregarClick(object sender, RoutedEventArgs e)
 
     var nuevoContacto = new Contact(nombre, telefono, email);
     
-    // 🔴 PUNTO CLAVE #6: Usamos el método público
-    if (agenda.AgregarContacto(nuevoContacto))  // ← ENCAPSULAMIENTO
+    if (agenda.AgregarContacto(nuevoContacto))
     {
         ActualizarLista();
         LimpiarCampos();
