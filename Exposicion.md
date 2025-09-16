@@ -2,18 +2,17 @@
 
 ### Puntos clave a mencionar:
 - ✅ La lista de contactos está **completamente encapsulada**
-- 
+- ✅ Modelos de datos bien implementados
+- ✅ 
 
 ---
 
 ## 🔒 **PARTE 1: ENCAPSULAMIENTO**
 
-### 📌 **Mostrar el archivo: `Services/Agenda.cs`**
 
 ```csharp
 public class Agenda
 {
-    // 🔴 PUNTO CLAVE #1: Lista PRIVADA
     private List<Contact> contacts;  // ← RESALTAR ESTO
     
     public Agenda()
@@ -23,7 +22,6 @@ public class Agenda
 ```
 
 ```csharp
-// 🔴 PUNTO CLAVE #2: Métodos PÚBLICOS para acceder
 public bool AgregarContacto(Contact contact)
 {
     if (contact == null || string.IsNullOrWhiteSpace(contact.Name))
@@ -42,8 +40,7 @@ public Contact? BuscarContacto(string name)
 
 public List<Contact> MostrarContactos()
 {
-    // 🔴 PUNTO CLAVE #3: Retorna una COPIA
-    return new List<Contact>(contacts);  // ← IMPORTANTE
+    return new List<Contact>(contacts);
 }
 ```
 
@@ -123,7 +120,6 @@ private void OnAgregarClick(object sender, RoutedEventArgs e)
 2. ⭐ **`return new List<Contact>(contacts);`** - Retornar copia, no original
 3. ⭐ **Validación en `AgregarContacto()`** - Protección de datos
 4. ⭐ **Métodos públicos** - Los únicos puntos de acceso
-5. ⭐ **Multiplataforma** - Mismo código en Windows y Linux
 
 ---
 
