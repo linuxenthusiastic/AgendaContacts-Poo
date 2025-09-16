@@ -117,7 +117,3 @@ private void OnAgregarClick(object sender, RoutedEventArgs e)
 4. ⭐ **Métodos públicos** - Los únicos puntos de acceso
 
 ---
-
-## ⏱️ **TIEMPO ESTIMADO TOTAL: 10-12 MINUTOS**
-
-¡Mucho éxito en tu exposición! 💪
