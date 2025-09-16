@@ -3,7 +3,7 @@
 ### Puntos clave a mencionar:
 - ✅ La lista de contactos está **completamente encapsulada**
 - ✅ Modelos de datos bien implementados
-- ✅ 
+- ✅ Multiplataforma
 
 ---
 
