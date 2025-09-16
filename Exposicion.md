@@ -1,5 +1,20 @@
 # 📚 EXPOSICIÓN - Agenda de Contactos
 
+Rubrica:
+
+Diseña un sistema para manejar contactos dentro de una agenda digital.
+
+    Cada contacto cuenta con nombre, número de teléfono y correo electrónico.
+    El usuario debe poder agregar contactos, buscar un contacto específico y mostrar todos los contactos almacenados.
+
+Puntos clave:
+
+    La lista interna de contactos no es accesible directamente por el usuario.
+    Se deben usar métodos como AgregarContacto(), BuscarContacto(), MostrarContactos().
+    El encapsulamiento asegura que los contactos solo pueden gestionarse mediante los métodos públicos definidos.
+
+
+---
 ### Puntos clave a mencionar:
 - ✅ La lista de contactos está **completamente encapsulada**
 - ✅ Modelos de datos bien implementados
