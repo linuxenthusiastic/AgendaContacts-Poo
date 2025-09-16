@@ -26,7 +26,7 @@ dotnet run
 
 # 2. Abrir PowerShell o CMD y clonar el proyecto
 git clone https://github.com/linuxenthusiastic/AgendaContacts-Poo
-cd ContactsAgenda
+cd AgendaContacts-Poo
 
 # 3. Ejecutar la aplicación
 dotnet run
