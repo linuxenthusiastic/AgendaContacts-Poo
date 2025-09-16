@@ -48,17 +48,6 @@ ContactsAgenda/
 └── ContactsAgenda.csproj  # Archivo del proyecto
 ```
 
-## 🔒 Principio de Encapsulamiento Implementado
-
-La clase `Agenda` protege completamente la lista de contactos:
-
-- ❌ **NO** se puede acceder directamente a la lista
-- ✅ **SÍ** se puede usar mediante métodos públicos:
-  - `AgregarContacto()`
-  - `BuscarContacto()`
-  - `MostrarContactos()`
-  - `EliminarContacto()`
-
 ## 👨‍💻 Autores
 
 - Santiago Abuawad y Benjamin Oliva
